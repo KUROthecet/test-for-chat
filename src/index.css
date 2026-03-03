@@ -1,0 +1,51 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* Custom Scrollbar for a cleaner VSCode-like look */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+/* Dark scrollbar for TOC */
+.bg-slate-900 .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.bg-slate-900 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+@keyframes pulse-once {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+  50% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(52, 211, 153, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+.animate-pulse-once {
+  animation: pulse-once 0.5s ease-out forwards;
+}
